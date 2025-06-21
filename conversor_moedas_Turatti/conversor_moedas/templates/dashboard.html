@@ -1,1 +1,40 @@
-{% extends "base.html" %} {% block title %}Conversor{% endblock %} {% block content %} <div class="card"> <h2>CONVERSOR DE MOEDAS</h2> <form method="POST"> <label>De:</label> <select name="de"> <option value="BRL">BRL</option> <option value="USD">USD</option> <option value="EUR">EUR</option> </select> <label>Para:</label> <select name="para"> <option value="USD">USD</option> <option value="BRL">BRL</option> <option value="EUR">EUR</option> </select> <input type="number" name="valor" step="0.01" required> <button type="submit">Converter</button> </form> {% if resultado is not none %} <p>Resultado: {{ resultado }}</p> {% endif %} </div> {% endblock %} 
+{% extends "base.html" %}
+
+{% block title %}
+  Conversor
+{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <h2>CONVERSOR DE MOEDAS</h2>
+
+    <form method="POST">
+      <label for="de">De:</label>
+      <select name="de" id="de">
+        <option value="BRL">BRL</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+
+      <label for="para">Para:</label>
+      <select name="para" id="para">
+        <option value="USD">USD</option>
+        <option value="BRL">BRL</option>
+        <option value="EUR">EUR</option>
+      </select>
+
+      <label for="valor">Valor:</label>
+      <input type="number" name="valor" id="valor" step="0.01" required>
+
+      <button type="submit">Converter</button>
+    </form>
+
+    {% if resultado is not none %}
+      {% if resultado is string %}
+        <p style="color: red;">{{ resultado }}</p>
+      {% else %}
+        <p>Resultado: {{ resultado }}</p>
+      {% endif %}
+    {% endif %}
+  </div>
+{% endblock %}

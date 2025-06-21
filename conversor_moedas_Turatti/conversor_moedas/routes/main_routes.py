@@ -10,19 +10,19 @@ main_bp = Blueprint('main', __name__)
 def home():
     return render_template("login.html")
 
-@main_bp.route("/dashboard", methods=["GET", "POST"])
+@main_bp.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
     resultado = None
-    if request.method == "POST":
-        valor = float(request.form.get("valor"))
-        de = request.form.get("de")
-        para = request.form.get("para")
-        
-        # Usa o serviço para fazer a conversão
+    if request.method == 'POST':
+        de = request.form['de']
+        para = request.form['para']
+        valor = float(request.form['valor'])
+
         resultado = convert_currency(valor, de, para)
-        
-    return render_template("dashboard.html", resultado=resultado)
+    
+    return render_template('dashboard.html', resultado=resultado)
+
 
 # ROTA ADICIONADA: Corrige o erro e torna a página de perfil funcional
 @main_bp.route("/perfil")
