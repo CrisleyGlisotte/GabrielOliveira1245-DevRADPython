@@ -73,6 +73,8 @@ source venv/bin/activate       # macOS/Linux
 
 pip install -r requirements.txt
 
+```
 ## 🚀 Execute o projeto:
-python app.py
+```
+ python app.py
 ```
