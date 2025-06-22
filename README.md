@@ -64,7 +64,7 @@ conversor_moedas_Turatti/
 ├── init_db.py
 ├── requirements.txt
 └── README.md ```
-
+```
 ## 📦 Instale os requisitos do projeto:
 ```
 ppython -m venv venv
@@ -73,9 +73,6 @@ source venv/bin/activate       # macOS/Linux
 
 pip install -r requirements.txt
 
-
 ## 🚀 Execute o projeto:
-```
 python app.py
-
 ```
