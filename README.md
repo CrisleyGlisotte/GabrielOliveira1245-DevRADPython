@@ -1,17 +1,81 @@
-# 💱 Conversor de Moedas - Projeto RAD em Python
+# 💱 Conversor de Moedas - Projeto RAD em Flask
 
-Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento Rápido de Aplicações (RAD) utilizando Python com o framework Flask. O objetivo é proporcionar uma aplicação simples, funcional e intuitiva para conversão de moedas, com foco na metodologia RAD, que privilegia o desenvolvimento ágil e iterativo.
+Consiste em desenvolver uma plataforma para *converter moedas (USD, EUR, BRL)* em tempo real, utilizando *dados oficiais do Banco Central do Brasil (BACEN)*. O projeto inclui autenticação de usuários, armazenamento de dados em banco SQLite, e interface web com formulário de conversão.
 
-## 🚀 Tecnologias Utilizadas
+## 🔧 Requisitos:
 
-- Python 
+- Python 3.8+
 - Flask
-- HTML5 e CSS3
+- Banco de dados: SQLite
 
-## ⚙️ Funcionalidades
 
-- Conversão de moedas
-- Interface web simples e responsiva
-- Verificação de entrada no formulário
-- Exibição do valor convertido
-- Estrutura modular seguindo boas práticas de Flask
+### 🗃️ Tabela 'usuarios' com os seguintes campos:
+```
+id: 5ae01089-d05c-4464-a5c9-3a3004fb24d2
+timestamp: Jun 11 2025, 16:15:46
+nomeCompleto: text (nullable)
+telefone: text (nullable)
+email: text (nullable)
+```
+
+## 🔐 Configuração de acesso ao banco de dados
+```
+DATABASE_URL=sqlite:///database/conversor.db  
+DATABASE_KEY="1d1f2e6f2b053c8b4b7c2d8a9f0e1c3b4a5d6e7f8g9h"
+
+## 📁 Estrutura do projeto:
+```
+conversor_moedas_Turatti/
+├── pycache/
+│ ├── app.cpython-313.pyc
+│ └── config.cpython-313.pyc
+├── database/
+│ ├── pycache/
+│ │ └── db.cpython-313.pyc
+│ ├── conversor.db
+│ └── db.py
+├── models/
+│ ├── pycache/
+│ │ ├── perfil.cpython-313.pyc
+│ │ └── usuario.cpython-313.pyc
+│ ├── perfil.py
+│ └── usuario.py
+├── routes/
+│ ├── pycache/
+│ │ ├── auth_routes.cpython-313.pyc
+│ │ └── main_routes.cpython-313.pyc
+│ ├── auth_routes.py
+│ └── main_routes.py
+├── services/
+│ ├── pycache/
+│ │ └── conversion.cpython-313.pyc
+│ └── conversion.py
+├── static/
+│ └── style.css
+├── templates/
+│ ├── base.html
+│ ├── dashboard.html
+│ ├── login.html
+│ ├── perfil.html
+│ └── register.html
+├── .env
+├── app.py
+├── config.py
+├── init_db.py
+├── requirements.txt
+└── README.md ```
+
+## 📦 Instale os requisitos do projeto:
+```
+ppython -m venv venv
+venv\Scripts\activate         # Windows
+source venv/bin/activate       # macOS/Linux
+
+pip install -r requirements.txt
+
+
+## 🚀 Execute o projeto:
+```
+python app.py
+
+```
