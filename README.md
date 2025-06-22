@@ -22,7 +22,7 @@ email: text (nullable)
 ```
 DATABASE_URL=sqlite:///database/conversor.db  
 DATABASE_KEY="1d1f2e6f2b053c8b4b7c2d8a9f0e1c3b4a5d6e7f8g9h"
-
+```
 ## 📁 Estrutura do projeto:
 ```
 conversor_moedas_Turatti/
