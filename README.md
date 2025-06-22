@@ -67,7 +67,7 @@ conversor_moedas_Turatti/
 ```
 ## 📦 Instale os requisitos do projeto:
 ```
-ppython -m venv venv
+python -m venv venv
 venv\Scripts\activate         # Windows
 source venv/bin/activate       # macOS/Linux
 
