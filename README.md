@@ -63,7 +63,7 @@ conversor_moedas_Turatti/
 ├── config.py
 ├── init_db.py
 ├── requirements.txt
-└── README.md ```
+└── README.md
 ```
 ## 📦 Instale os requisitos do projeto:
 ```
