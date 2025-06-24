@@ -18,7 +18,16 @@ telefone: text (nullable)
 email: text (nullable)
 ```
 
-## 🔐 Configuração de acesso ao banco de dados
+## Imagens das Capturas de Tela:
+```
+(https://github.com/CrisleyGlisotte/GabrielOliveira1245-DevRADPython/blob/main/Tela%20de%20Login.png?raw=true)
+
+(https://github.com/CrisleyGlisotte/GabrielOliveira1245-DevRADPython/blob/main/Tela%20do%20Conversor%20de%20Moedas.png?raw=true)
+
+(https://github.com/CrisleyGlisotte/GabrielOliveira1245-DevRADPython/blob/main/TeladoPerfildeUsurio.png?raw=true)
+```
+
+## 🔐 Configuração de acesso ao banco de dados:
 ```
 DATABASE_URL=sqlite:///database/conversor.db  
 DATABASE_KEY="1d1f2e6f2b053c8b4b7c2d8a9f0e1c3b4a5d6e7f8g9h"
